@@ -1,21 +1,41 @@
-# Python
+# --- Python ---
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
-venv/
-.env
 
-# Django
+# --- Virtual Environments  ---
+venv/
+.venv/
+env/
+bin/
+include/
+lib/
+share/
+
+# --- Django ---
+
 db.sqlite3
+
 media/
+
 staticfiles/
 
-# Docker
-.docker/
+# --- Environment Variables ---
+.env
 
-# IDEs
+# --- IDEs / Editors ---
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# --- OS Specific ---
+
+Thumbs.db
+db
+.DS_Store
+
+# --- Docker ---
+.docker/
