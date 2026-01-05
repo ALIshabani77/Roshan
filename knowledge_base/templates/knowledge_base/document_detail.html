@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ document.title }} | جزئیات مستندات</title>
+    <style>
+        :root {
+            --bg-dark: #0f0f0f;
+            --container-bg: #1a1a1a;
+            --gold-primary: #d4af37;
+            --text-main: #e0e0e0;
+        }
+
+        body { 
+            font-family: 'Tahoma', sans-serif; 
+            background-color: var(--bg-dark); 
+            color: var(--text-main);
+            padding: 40px; 
+            line-height: 1.8;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container { 
+            max-width: 850px; 
+            width: 100%;
+            background: var(--container-bg); 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+
+        h1 { 
+            color: var(--gold-primary); 
+            border-bottom: 1px solid #333; 
+            padding-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .content { 
+            margin-top: 30px; 
+            font-size: 1.1em; 
+            text-align: justify; 
+            white-space: pre-wrap;
+            color: #ccc;
+        }
+
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 40px; 
+            padding: 12px 25px; 
+            background: transparent; 
+            color: var(--gold-primary); 
+            text-decoration: none; 
+            border-radius: 50px; 
+            border: 1px solid var(--gold-primary);
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover { 
+            background: var(--gold-primary); 
+            color: black;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🟡 {{ document.title }}</h1>
+    <div class="content">
+        {{ document.content }}
+    </div>
+    
+    <a href="{% url 'knowledge_base:ask_ai' %}" class="back-btn">← بازگشت به پنل گفتگو</a>
+</div>
+
+</body>
+</html>
